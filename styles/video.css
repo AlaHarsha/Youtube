@@ -1,16 +1,16 @@
 .thumbnail {
     width: 100%;
-    cursor:pointer;
+    cursor: pointer;
 }
-.video-time{
+.video-time {
     background-color: black;
-    color:white;
+    color: white;
     position: absolute;
     right: 5px;
     bottom: 8px;
-    font-family: Roboto,arial;
-    padding:2px 4px;
-    border-radius:2px;
+    font-family: Roboto, arial;
+    padding: 2px 4px;
+    border-radius: 2px;
 }
 .video-title {
     margin-top: 0;
@@ -30,8 +30,7 @@
 }
 .thumbnail-row {
     margin-bottom: 8px;
-    position:relative;
-     /* FIXED: removed space before px */
+    position: relative;
 }
 .video-author {
     font-size: 12px;
@@ -42,13 +41,55 @@
     font-size: 12px;
     color: rgb(96, 96, 96);
 }
-.video-grid{
-    display:grid;
+.video-grid {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 50px;
     row-gap: 40px;
 }
-.video-title-link{
+.video-title-link {
     text-decoration: none;
     color: black;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* For tablets */
+@media screen and (max-width: 1024px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+}
+
+/* For small tablets / large phones */
+@media screen and (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr; /* 2 columns */
+        column-gap: 20px;
+        row-gap: 25px;
+    }
+}
+
+/* For mobile phones */
+@media screen and (max-width: 480px) {
+    .video-grid {
+        grid-template-columns: 1fr; /* 1 column */
+        column-gap: 0;
+        row-gap: 20px;
+    }
+
+    .video-title {
+        font-size: 12px;
+    }
+
+    .video-author,
+    .video-status {
+        font-size: 11px;
+    }
+
+    .profile_picture {
+        width: 30px;
+    }
 }
